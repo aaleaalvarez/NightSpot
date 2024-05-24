@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingTop="30dp"
+    android:paddingRight="30dp"
+    android:paddingBottom="1dp">
+
+    <!-- TextView para "Puntos" -->
+    <TextView
+        android:id="@+id/textViewLabelPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp"
+        android:text="Puntos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="35sp" />
+
+    <!-- TextView para "40" justo al lado del "Puntos" -->
+    <TextView
+        android:id="@+id/textViewPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textViewLabelPoints"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_toEndOf="@+id/textViewLabelPoints"
+        android:layout_toRightOf="@+id/textViewLabelPoints"
+        android:text="40"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <!-- Campo de entrada para el código -->
+    <EditText
+        android:id="@+id/editTextCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewLabelPoints"
+        android:layout_marginTop="40dp"
+        android:hint="Introduce el código" />
+
+
+    <TextView
+        android:id="@+id/textViewRatePlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Valora el local"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBar"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/button_rounded"
+        android:text="Enviar"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="77dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/buttonSend"
+        android:background="@drawable/button_rounded"
+        android:text="Cancelar"
+        android:textColor="@android:color/white" />
+
+
+    <!-- Valoración de estrellas -->
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewRatePlace"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:numStars="5"
+        android:stepSize="1.0" />
+
+    <include
+        layout="@layout/menu_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footerSpace" />
+
+    <View
+        android:id="@+id/footerSpace"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
+

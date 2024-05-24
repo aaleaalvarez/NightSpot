@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingTop="30dp"
+    android:paddingRight="30dp"
+    tools:context=".activities.NewDiscoActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Añadir Nueva Discoteca"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputDiscoNameLayout"
+        style="@style/TextInputLayoutOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="16dp"
+        android:hint="Nombre de la discoteca">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextDiscoName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputDiscoCodeLayout"
+        style="@style/TextInputLayoutOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textInputDiscoNameLayout"
+        android:layout_marginTop="8dp"
+        android:hint="Código de la discoteca">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextDiscoCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputDiscoDescriptionLayout"
+        style="@style/TextInputLayoutOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textInputDiscoCodeLayout"
+        android:layout_marginTop="8dp"
+        android:hint="Descripción">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextDiscoDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:minLines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputImageUrlLayout"
+        style="@style/TextInputLayoutOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textInputDiscoDescriptionLayout"
+        android:layout_marginTop="12dp"
+        android:hint="URL de la imagen">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextImageUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textUri" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLatitudeLayout"
+        style="@style/TextInputLayoutOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textInputImageUrlLayout"
+        android:layout_marginTop="12dp"
+        android:hint="Latitud">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextLatitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal|numberSigned" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLongitudeLayout"
+        style="@style/TextInputLayoutOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textInputLatitudeLayout"
+        android:layout_marginTop="12dp"
+        android:hint="Longitud">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextLongitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal|numberSigned" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonSaveDisco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonCancelDisco"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_rounded"
+        android:text="Guardar Discoteca"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/buttonCancelDisco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footerSpace"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_rounded"
+        android:text="Cancelar"
+        android:textColor="@android:color/white" />
+
+    <View
+        android:id="@+id/footerSpace"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
+

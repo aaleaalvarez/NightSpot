@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingTop="30dp"
+    android:paddingRight="30dp"
+    android:paddingBottom="1dp"
+    tools:context=".activities.MainActivity">
+
+    <!-- TextView para el saludo -->
+    <TextView
+        android:id="@+id/textViewGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Cargando..."
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="26sp" />
+
+    <!-- LinearLayout para Mapa y Resultados -->
+    <LinearLayout
+        android:id="@+id/linearLayoutMapAndResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewGreeting"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewResults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="Resultados" />
+
+        <Button
+            android:id="@+id/buttonViewMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Ver en forma de mapa" />
+
+    </LinearLayout>
+
+    <!-- RecyclerView para listar discotecas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewDiscos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/footerSpace"
+        android:layout_below="@id/linearLayoutMapAndResults"
+        android:layout_marginTop="8dp"
+        android:scrollbars="vertical" />
+
+    <include
+        layout="@layout/menu_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footerSpace" />
+
+    <!-- Espacio en el pie de página -->
+    <View
+        android:id="@+id/footerSpace"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true" />
+
+    <!-- ProgressBar para indicar carga -->
+    <ProgressBar
+        android:id="@+id/loadingIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

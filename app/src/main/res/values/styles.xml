@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="TextInputLayoutOrange" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/orange</item> <!-- Color de la línea -->
+        <item name="hintTextColor">@color/orange
+        </item> <!-- Color del texto del hint si también deseas cambiarlo -->
+        <item name="colorControlNormal">@color/orange
+        </item> <!-- Color de la línea inferior en estado normal -->
+        <item name="colorControlActivated">@color/orange
+        </item> <!-- Color de la línea inferior cuando está activo/focado -->
+    </style>
+
+</resources>
